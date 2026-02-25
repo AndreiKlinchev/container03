@@ -28,6 +28,8 @@ running wslexec: An error occurred while running the command. Wsl/Service/Regist
 
 ![alt text](image/Screenshot_1.png)
 
+## To be continued → 
+
 ## Источники
 
 - [Решение проблем с docker через power shell](https://www.reddit.com/r/docker/comments/1ft6u6f/docker_desktop_unexpected_wsl_error/)
