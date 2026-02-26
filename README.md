@@ -19,8 +19,8 @@ running wslexec: An error occurred while running the command. Wsl/Service/Regist
 Решить данную проблему получилось через 3 команды в Power Shell:
 
 - ```wsl --shutdown``` - полностью останавливает "windows subsystem for linux"
-- wsl --unregister docker-desktop - удаление дистрибутива docker desktop из wls
-- wsl --unregister docker-desktop-data - удаляет все данные (образов, контейнеров и вэйлюм докера)
+- `wsl --unregister docker-desktop` - удаление дистрибутива docker desktop из wls
+- ```wsl --unregister docker-desktop-data``` - удаляет все данные (образов, контейнеров и вэйлюм докера)
 
 После перезапуска системы и docker desktop был сделан экспериментальный запрос в старой учебной безе данных на postgresql. Как видим, всё работает.
 
@@ -28,7 +28,27 @@ running wslexec: An error occurred while running the command. Wsl/Service/Regist
 
 ![alt text](image/Screenshot_1.png)
 
-## To be continued → 
+P.S. В конечном итоге это сработало лишь один раз, основная проблема была в отключённым Hyper -V который произвольно отключился в "Компонентах windows"
+
+![alt text](image/Screenshot_5.png)
+
+> Создайте в папке containers03 файл Dockerfile со следующим содержимым:
+
+![alt text](image/Screenshot_3.png)
+
+> В той же папке проекта создайте папку site. В новой папке создайте файл index.html с произвольным содержимым.
+
+![alt text](image/Screenshot_4.png)
+
+> Откройте терминал в папке containers03 и выполните команду: `docker build -t containers03 .`
+
+`docker build -t containers03 .`
+
+>> Сколько времени создавался образ?
+
+`Building 14.9s (7/7) FINISHED`
+
+## To be continued →
 
 ## Источники
 
