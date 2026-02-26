@@ -44,9 +44,33 @@ P.S. В конечном итоге это сработало лишь один 
 
 `docker build -t containers03 .`
 
->> Сколько времени создавался образ?
+> Сколько времени создавался образ?
 
 `Building 14.9s (7/7) FINISHED`
+
+> Выполните команду для запуска контейнера: `docker run --name containers03 containers03`
+
+В консоль вывелось: `hello from 93a4ad44e3cc`
+
+> Удалите контейнер и запустите снова, выполнив команды:
+
+```
+docker rm containers03
+docker run -ti --name containers03 containers03 bash
+```
+
+> В открывшемся окне выполните команды:
+>
+> ```
+> cd /var/www/html/
+> ls -l```
+
+```
+total 4
+-rwxr-xr-x 1 root root 574 Feb 26 08:11 index.html
+```
+
+Таким оразом, мы видим что в контейнер копировался сайт `index.html` который мы создали в папке sites.
 
 ## To be continued →
 
