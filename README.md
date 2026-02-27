@@ -24,21 +24,21 @@ running wslexec: An error occurred while running the command. Wsl/Service/Regist
 
 После перезапуска системы и docker desktop был сделан экспериментальный запрос в старой учебной безе данных на postgresql. Как видим, всё работает.
 
-![alt text](image/Screenshot_2.png)
+![проверка через select если работает контейнер с postgresql](image/Screenshot_2.png)
 
-![alt text](image/Screenshot_1.png)
+![Поставленный Docker Desktop](image/Screenshot_1.png)
 
 P.S. В конечном итоге это сработало лишь один раз, основная проблема была в отключённым Hyper -V который произвольно отключился в "Компонентах windows"
 
-![alt text](image/Screenshot_5.png)
+![Список включённых и отключённых компонентов Windows](image/Screenshot_5.png)
 
 > Создайте в папке containers03 файл Dockerfile со следующим содержимым:
 
-![alt text](image/Screenshot_3.png)
+![Код созданного dockerfile](image/Screenshot_3.png)
 
 > В той же папке проекта создайте папку site. В новой папке создайте файл index.html с произвольным содержимым.
 
-![alt text](image/Screenshot_4.png)
+![Код index.html](image/Screenshot_4.png)
 
 > Откройте терминал в папке containers03 и выполните команду: `docker build -t containers03 .`
 
@@ -63,7 +63,8 @@ docker run -ti --name containers03 containers03 bash
 >
 > ```
 > cd /var/www/html/
-> ls -l```
+> ls -l
+> ```
 
 ```
 total 4
@@ -71,6 +72,10 @@ total 4
 ```
 
 Таким оразом, мы видим что в контейнер копировался сайт `index.html` который мы создали в папке sites.
+
+## Выводы
+
+В данной лабораторной работе мы познакомились с основами создания контейнеров в docker. Научились писать базовый dockerfile, который не только выводит сообщение в консоль, но и также, копирует в образ контейнера части текущего проекта. Данные знания помогут в дальнейшем более углублённо понять принципы работы контейнеров.
 
 ## To be continued →
 
