@@ -42,7 +42,7 @@ P.S. В конечном итоге это сработало лишь один 
 
 > Откройте терминал в папке containers03 и выполните команду: `docker build -t containers03 .`
 
-`docker build -t containers03 .`
+`docker build -t containers03 .` - создаём образ с именем контейнер
 
 > Сколько времени создавался образ?
 
@@ -54,10 +54,9 @@ P.S. В конечном итоге это сработало лишь один 
 
 > Удалите контейнер и запустите снова, выполнив команды:
 
-```
-docker rm containers03
-docker run -ti --name containers03 containers03 bash
-```
+`docker rm containers03` - удаляем контейнер *containers03*
+`docker run -ti --name containers03 containers03 bash` - запускает контейнер с рабочим терминалом контейнера
+
 
 > В открывшемся окне выполните команды:
 >
@@ -77,8 +76,7 @@ total 4
 
 В данной лабораторной работе мы познакомились с основами создания контейнеров в docker. Научились писать базовый dockerfile, который не только выводит сообщение в консоль, но и также, копирует в образ контейнера части текущего проекта. Данные знания помогут в дальнейшем более углублённо понять принципы работы контейнеров.
 
-## To be continued →
-
 ## Источники
 
 - [Решение проблем с docker через power shell](https://www.reddit.com/r/docker/comments/1ft6u6f/docker_desktop_unexpected_wsl_error/)
+- [Инструкция по лабораторной работе](https://elearning.usm.md/mod/quiz/view.php?id=303622)
